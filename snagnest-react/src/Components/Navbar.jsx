@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "../Context/CartContext";
 
 const Navbar = () => {
   const { cart } = useContext(CartContext);
@@ -11,7 +11,10 @@ const Navbar = () => {
         SnagNest
       </Link>
 
-      <input type="text" placeholder="Search products" />
+      <input
+        type="text"
+        placeholder="Search products"
+      />
 
       <Link to="/cart">
         Cart ({cart.length})
